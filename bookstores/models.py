@@ -26,11 +26,17 @@ class Book(models.Model):
     publisher = models.ForeignKey(Publisher)
     pubdate = models.DateField()
 
+    def print_authors(self):
+        strx = ""
+        for aut in self.authors.all():
+            strx += str(aut) + " / "
+        return strx
+
     def __str__(self):
         return self.name + " - " + str(self.pages) + " páginas \n" \
-                                                     "Autores: {" + self.authors.all() + "\n" \
-                                                                                                    "Publisher: " \
-               + self.publisher
+                                                     "Autores: {" + self.print_authors() + "}\n" \
+                                                                                           "Publisher: " \
+               + str(self.publisher)
 
 
 class Store(models.Model):
