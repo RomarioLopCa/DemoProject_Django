@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls',
+    'bookstores',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'DemoProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'polls',
+        'NAME': 'demoproject',
         'USER': 'root',
         'PASSWORD': 'root',
     }
