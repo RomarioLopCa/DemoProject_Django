@@ -43,3 +43,8 @@ class Store(models.Model):
     name = models.CharField(max_length=300)
     books = models.ManyToManyField(Book)
     registered_users = models.PositiveIntegerField()
+
+
+class AddressStore(Store):
+    x_coordinate = models.CharField(max_length=20)
+    y_coordinate = models.CharField(max_length=20)
